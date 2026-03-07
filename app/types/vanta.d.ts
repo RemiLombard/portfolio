@@ -1,27 +1,27 @@
-declare module 'vanta/dist/vanta.net.min' {
+declare module "vanta/dist/vanta.net.min" {
   interface VantaNetOptions {
-    el: HTMLElement
-    THREE: any
-    mouseControls?: boolean
-    touchControls?: boolean
-    gyroControls?: boolean
-    minHeight?: number
-    minWidth?: number
-    scale?: number
-    scaleMobile?: number
-    color?: number
-    backgroundColor?: number
-    points?: number
-    maxDistance?: number
-    spacing?: number
-    showDots?: boolean
+    el: HTMLElement;
+    THREE: any;
+    mouseControls?: boolean;
+    touchControls?: boolean;
+    gyroControls?: boolean;
+    minHeight?: number;
+    minWidth?: number;
+    scale?: number;
+    scaleMobile?: number;
+    color?: number;
+    backgroundColor?: number;
+    points?: number;
+    maxDistance?: number;
+    spacing?: number;
+    showDots?: boolean;
   }
 
   interface VantaEffect {
-    destroy: () => void
-    resize: () => void
-    setOptions: (options: Partial<VantaNetOptions>) => void
+    destroy: () => void;
+    resize: () => void;
+    setOptions: (options: Partial<VantaNetOptions>) => void;
   }
 
-  export default function NET(options: VantaNetOptions): VantaEffect
+  export default function NET(options: VantaNetOptions): VantaEffect;
 }

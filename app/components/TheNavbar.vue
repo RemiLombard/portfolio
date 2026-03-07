@@ -4,47 +4,89 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <NuxtLink to="/" class="block">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-10 h-10">
-            <rect width="32" height="32" fill="#C84B31"/>
-            <text x="16" y="22" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" text-anchor="middle" fill="#ECDBBA">RL</text>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            class="w-10 h-10"
+          >
+            <rect width="32" height="32" fill="#C84B31" />
+            <text
+              x="16"
+              y="22"
+              font-family="Arial Black, sans-serif"
+              font-size="14"
+              font-weight="900"
+              text-anchor="middle"
+              fill="#ECDBBA"
+            >
+              RL
+            </text>
           </svg>
         </NuxtLink>
-        
+
         <!-- Navigation desktop -->
         <div class="hidden md:flex items-center gap-8">
-          <a 
-            v-for="link in navLinks" 
+          <a
+            v-for="link in navLinks"
             :key="link.to"
             :href="link.to"
             class="text-sm font-bold uppercase tracking-wider text-dark hover:text-primary transition-colors"
           >
             {{ link.label }}
           </a>
-          <a href="mailto:remi.lombard70@gmail.com" class="btn btn-primary text-sm py-2 px-4">
+          <a
+            href="mailto:remi.lombard70@gmail.com"
+            class="btn btn-primary text-sm py-2 px-4"
+          >
             Contact
           </a>
         </div>
-        
+
         <!-- Menu burger mobile -->
-        <button 
+        <button
           @click="isMenuOpen = !isMenuOpen"
           class="md:hidden p-2 text-dark"
           aria-label="Menu"
         >
-          <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            v-if="!isMenuOpen"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
-          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <svg
+            v-else
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
-      
+
       <!-- Menu mobile -->
-      <div v-if="isMenuOpen" class="md:hidden mt-4 pb-4 border-t border-dark/20 pt-4">
+      <div
+        v-if="isMenuOpen"
+        class="md:hidden mt-4 pb-4 border-t border-dark/20 pt-4"
+      >
         <div class="flex flex-col gap-4">
-          <a 
-            v-for="link in navLinks" 
+          <a
+            v-for="link in navLinks"
             :key="link.to"
             :href="link.to"
             class="text-lg font-bold uppercase tracking-wider text-dark"
@@ -56,18 +98,18 @@
       </div>
     </div>
   </nav>
-  
+
   <!-- Spacer -->
   <div class="h-16"></div>
 </template>
 
 <script setup lang="ts">
-const isMenuOpen = ref(false)
+const isMenuOpen = ref(false);
 
 const navLinks = [
-  { to: '#about', label: 'À propos' },
-  { to: '#projects', label: 'Projets' },
-  { to: '#experience', label: 'Parcours' },
-  { to: '#skills', label: 'Outils' }
-]
+  { to: "#about", label: "À propos" },
+  { to: "#projects", label: "Projets" },
+  { to: "#experience", label: "Parcours" },
+  { to: "#skills", label: "Outils" },
+];
 </script>

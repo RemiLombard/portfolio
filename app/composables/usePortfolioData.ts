@@ -1,102 +1,101 @@
-import type { Project, Experience, Skill, Profile } from '~/types/database'
+import type { Project, Experience, Skill, Profile } from "~/types/database";
 
 export const usePortfolioData = () => {
-  const supabase = useSupabaseClient()
+  const supabase = useSupabaseClient();
 
   // Récupérer le profil
   const getProfile = async (): Promise<Profile | null> => {
-    const { data, error } = await supabase
-      .from('profile')
-      .select('*')
-      .single()
-    
+    const { data, error } = await supabase.from("profile").select("*").single();
+
     if (error) {
-      console.error('Erreur lors de la récupération du profil:', error)
-      return null
+      console.error("Erreur lors de la récupération du profil:", error);
+      return null;
     }
-    return data
-  }
+    return data;
+  };
 
   // Récupérer tous les projets
   const getProjects = async (featured?: boolean): Promise<Project[]> => {
     let query = supabase
-      .from('projects')
-      .select('*')
-      .order('order', { ascending: true })
-    
+      .from("projects")
+      .select("*")
+      .order("order", { ascending: true });
+
     if (featured !== undefined) {
-      query = query.eq('featured', featured)
+      query = query.eq("featured", featured);
     }
-    
-    const { data, error } = await query
-    
+
+    const { data, error } = await query;
+
     if (error) {
-      console.error('Erreur lors de la récupération des projets:', error)
-      return []
+      console.error("Erreur lors de la récupération des projets:", error);
+      return [];
     }
-    return data || []
-  }
+    return data || [];
+  };
 
   // Récupérer un projet par slug
   const getProjectBySlug = async (slug: string): Promise<Project | null> => {
     const { data, error } = await supabase
-      .from('projects')
-      .select('*')
-      .eq('slug', slug)
-      .single()
-    
+      .from("projects")
+      .select("*")
+      .eq("slug", slug)
+      .single();
+
     if (error) {
-      console.error('Erreur lors de la récupération du projet:', error)
-      return null
+      console.error("Erreur lors de la récupération du projet:", error);
+      return null;
     }
-    return data
-  }
+    return data;
+  };
 
   // Récupérer les expériences
-  const getExperiences = async (type?: 'work' | 'education'): Promise<Experience[]> => {
+  const getExperiences = async (
+    type?: "work" | "education",
+  ): Promise<Experience[]> => {
     let query = supabase
-      .from('experiences')
-      .select('*')
-      .order('order', { ascending: true })
-    
+      .from("experiences")
+      .select("*")
+      .order("order", { ascending: true });
+
     if (type) {
-      query = query.eq('type', type)
+      query = query.eq("type", type);
     }
-    
-    const { data, error } = await query
-    
+
+    const { data, error } = await query;
+
     if (error) {
-      console.error('Erreur lors de la récupération des expériences:', error)
-      return []
+      console.error("Erreur lors de la récupération des expériences:", error);
+      return [];
     }
-    return data || []
-  }
+    return data || [];
+  };
 
   // Récupérer les compétences
   const getSkills = async (category?: string): Promise<Skill[]> => {
     let query = supabase
-      .from('skills')
-      .select('*')
-      .order('order', { ascending: true })
-    
+      .from("skills")
+      .select("*")
+      .order("order", { ascending: true });
+
     if (category) {
-      query = query.eq('category', category)
+      query = query.eq("category", category);
     }
-    
-    const { data, error } = await query
-    
+
+    const { data, error } = await query;
+
     if (error) {
-      console.error('Erreur lors de la récupération des compétences:', error)
-      return []
+      console.error("Erreur lors de la récupération des compétences:", error);
+      return [];
     }
-    return data || []
-  }
+    return data || [];
+  };
 
   return {
     getProfile,
     getProjects,
     getProjectBySlug,
     getExperiences,
-    getSkills
-  }
-}
+    getSkills,
+  };
+};

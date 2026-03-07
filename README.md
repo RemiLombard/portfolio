@@ -33,8 +33,8 @@ Variables CSS dans `app/assets/css/main.css` :
 
 ```css
 :root {
-  --color-primary: #E85D3B;
-  --color-bg-cream: #F9E8D9;
+  --color-primary: #e85d3b;
+  --color-bg-cream: #f9e8d9;
 }
 ```
 
@@ -46,6 +46,7 @@ npm run build  # Build production
 ```
 
 ---
+
 Développé par Rémi Lombard
 
 ```bash
