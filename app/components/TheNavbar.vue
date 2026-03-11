@@ -4,24 +4,7 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <NuxtLink to="/" class="block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            class="w-10 h-10"
-          >
-            <rect width="32" height="32" fill="#C84B31" />
-            <text
-              x="16"
-              y="22"
-              font-family="Arial Black, sans-serif"
-              font-size="14"
-              font-weight="900"
-              text-anchor="middle"
-              fill="#ECDBBA"
-            >
-              RL
-            </text>
-          </svg>
+          <img src="/logo-rl.svg" alt="RL" class="w-10 h-10 md:w-14 md:h-14" />
         </NuxtLink>
 
         <!-- Navigation desktop -->

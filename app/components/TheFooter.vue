@@ -4,7 +4,7 @@
       <div class="grid md:grid-cols-3 gap-12">
         <!-- Logo et description -->
         <div>
-          <h3 class="font-title text-4xl text-primary mb-4">RL</h3>
+          <img src="/logo-rl.svg" alt="RL" class="w-16 h-16 mb-4" />
           <p class="text-cream-light/70 leading-relaxed">
             Étudiant en BUT MMI, passionné par la communication et le marketing
             digital.
