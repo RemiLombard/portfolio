@@ -25,10 +25,10 @@
 useSeoMeta({
   title: "Rémi Lombard | Portfolio",
   description:
-    "Portfolio de Rémi Lombard - Étudiant en BUT MMI, spécialité DWDI. Chargé de communication et marketing en alternance chez MOGRA.",
+    "Portfolio de Rémi Lombard - Futur étudiant à l'ISCOM Paris. Chargé de communication et marketing en alternance chez MOGRA.",
   ogTitle: "Rémi Lombard | Portfolio",
   ogDescription:
-    "Étudiant en BUT MMI, passionné par la communication digitale et le développement web.",
+    "Futur étudiant à l'ISCOM Paris, passionné par la communication et le marketing digital.",
   ogImage: "/og-image.jpg",
   twitterCard: "summary_large_image",
 });

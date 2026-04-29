@@ -64,8 +64,8 @@
           </p>
 
           <p class="text-lg leading-relaxed anim-item opacity-0">
-            Mon ambition ? Rejoindre une
-            <strong>grande école de communication ou marketing</strong> pour
+            Mon ambition ? Trouver une
+            <strong>nouvelle alternance à Paris</strong> pour
             affiner mon expertise et devenir un acteur clé de la transformation
             digitale des marques.
           </p>
