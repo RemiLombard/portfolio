@@ -32,14 +32,14 @@
         </h1>
 
         <p ref="descRef" class="text-lg md:text-xl text-dark/80 mt-8 opacity-0">
-          Étudiant en <span class="text-primary font-bold">BUT MMI</span> —
-          Spécialité DWDI
+          Futur étudiant à l'<span class="text-primary font-bold">ISCOM Paris</span> —
+          Parcours Communication et Marketing Digital
         </p>
         <p
           ref="altRef"
           class="text-base md:text-lg text-dark/60 mt-2 opacity-0"
         >
-          Alternant Communication & Marketing chez MOGRA
+          Alternant Communication et Marketing chez MOGRA
         </p>
 
         <div
